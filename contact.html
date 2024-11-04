@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - HospitEase</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <h1>HospitEase</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a id="login-button" href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="contact-section">
+        <h2>Contact Us</h2>
+        <form id="contact-form" onsubmit="handleFormSubmit(event)">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" rows="4" required placeholder="Enter your message"></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+        <p id="confirmation" style="display:none; color:green;">Message sent!</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 HospitEase. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Prevent default form submission
+            document.getElementById('confirmation').style.display = 'block'; // Show confirmation message
+            document.getElementById('contact-form').reset(); // Reset the form
+        }
+
+        function updateLoginStatus() {
+            const loginButton = document.getElementById("login-button");
+
+            if (localStorage.getItem("isLoggedIn") === "true") {
+                loginButton.textContent = "Logout";
+                loginButton.href = "#"; // Prevent navigation on logout
+                loginButton.onclick = function () {
+                    localStorage.removeItem("isLoggedIn"); // Remove login status
+                    updateLoginStatus(); // Update button text
+                };
+            } else {
+                loginButton.textContent = "Login";
+                loginButton.href = "login.html"; // Link to login page
+                loginButton.onclick = null; // Reset onclick
+            }
+        }
+
+        updateLoginStatus();
+    </script>
+</body>
+
+</html>

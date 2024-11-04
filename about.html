@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - HospitEase</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <h1>HospitEase</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a id="login-button" href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="about-section">
+        <h2>About Us</h2>
+        <p>
+            Welcome to HospitEase, where we prioritize your health and well-being.
+            Our team is dedicated to providing top-notch medical services with
+            compassion and expertise. We strive to make healthcare accessible,
+            effective, and personalized for all our patients.
+        </p>
+    </section>
+
+    <section class="team-section">
+        <h2>Meet Our Team</h2>
+        <div class="team-container">
+            <div class="team-member">
+                <img src="t1.jpeg" alt="Dr. Sarah Thompson">
+                <h3>Dr. Sarah Thompson</h3>
+                <p>Chief Medical Officer</p>
+            </div>
+            <div class="team-member">
+                <img src="t2.jpeg" alt="Dr. James Collins">
+                <h3>Dr. James Collins</h3>
+                <p>Head of Surgery</p>
+            </div>
+            <div class="team-member">
+                <img src="t3.jpeg" alt="Dr. Emily Carter">
+                <h3>Dr. Emily Carter</h3>
+                <p>Head of Pediatrics</p>
+            </div>
+            <div class="team-member">
+                <img src="t4.jpeg" alt="Dr. Michael Lee">
+                <h3>Dr. Michael Lee</h3>
+                <p>Head of Cardiology</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 HospitEase. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Simple login status toggle script
+        function updateLoginStatus() {
+            const loginButton = document.getElementById("login-button");
+
+            if (localStorage.getItem("isLoggedIn") === "true") {
+                loginButton.textContent = "Logout";
+                loginButton.href = "#";
+                loginButton.onclick = function () {
+                    localStorage.removeItem("isLoggedIn");
+                    updateLoginStatus();
+                };
+            } else {
+                loginButton.textContent = "Login";
+                loginButton.href = "login.html";
+                loginButton.onclick = null;
+            }
+        }
+
+        updateLoginStatus();
+    </script>
+</body>
+
+</html>

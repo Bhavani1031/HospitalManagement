@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - HospitEase</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function handleLogin(event) {
+            event.preventDefault(); // Prevent the default form submission
+            // Here you can process login data, e.g. check against a database.
+            // For this example, we'll just redirect to the home page.
+            window.location.href = 'index.html'; // Redirect to the home page
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">HospitEase</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="login-button">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Login Section -->
+    <section class="login-section">
+        <h2>Login</h2>
+        <div class="login-form-container">
+            <form action="#" method="POST" onsubmit="handleLogin(event)">
+                <label for="username">Name or Email:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </section>
+    <script>
+        document.querySelector("form").onsubmit = function (e) {
+            e.preventDefault(); // Prevent default form submission
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // Simple validation (replace with actual validation logic)
+            if (username && password) {
+                // Set login status in localStorage
+                localStorage.setItem("isLoggedIn", "true");
+                // Redirect to home page after login
+                window.location.href = "index.html";
+            } else {
+                alert("Please enter both username and password.");
+            }
+        };
+    </script>
+
+</body>
+
+</html>

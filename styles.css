@@ -1,0 +1,449 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #f4eded;
+}
+
+header {
+    background-color: #6A1B9A;
+    /* Dark purple for navbar */
+    padding: 15px 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+}
+
+.login-button {
+    background-color: #E0E0E0;
+    /* Grey button for login */
+    color: #6A1B9A;
+    /* Dark purple text */
+    border-radius: 5px;
+}
+
+.login-button:hover {
+    background-color: #BDBDBD;
+    /* Darker grey on hover */
+}
+
+/* Landing Section */
+.landing-section {
+    background-image: url('h3.jpg');
+    /* Add your background image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.landing-section .content {
+    background-color: rgba(106, 27, 154, 0.7);
+    /* Semi-transparent dark purple */
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.cta-button {
+    background-color: #E0E0E0;
+    /* Grey button for CTA */
+    color: #6A1B9A;
+    /* Dark purple text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background-color: #BDBDBD;
+    /* Darker grey on hover */
+}
+
+.about-section {
+    padding: 60px 20px;
+    background-color: #F3EAFD;
+    /* Lightish purple background */
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 2.5em;
+    color: #6A1B9A;
+    /* Dark purple for heading */
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #555;
+}
+
+/* Team Section */
+.team-section {
+    padding: 60px 20px;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+.team-section h2 {
+    font-size: 2.5em;
+    color: #6A1B9A;
+    /* Dark purple for heading */
+    margin-bottom: 40px;
+}
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.team-member {
+    background-color: #E0E0E0;
+    /* Grey box for team members */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-member img {
+    width: 150px;
+    /* Set a fixed width */
+    height: 150px;
+    /* Set a fixed height */
+    object-fit: cover;
+    /* Ensures images fill the square without distortion */
+    border-radius: 10px;
+    /* Slightly rounded corners */
+    margin-bottom: 10px;
+}
+
+
+.team-member h3 {
+    font-size: 1.2em;
+    color: #6A1B9A;
+    /* Dark purple for names */
+    margin: 10px 0;
+}
+
+.team-member p {
+    font-size: 0.9em;
+    color: #333;
+    /* Dark text for readability */
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #6A1B9A;
+    color: white;
+}
+
+/* Login Section */
+.login-section {
+    padding: 60px 20px;
+    background-color: #F3EAFD;
+    /* Lightish purple background */
+    text-align: center;
+}
+
+.login-section h2 {
+    font-size: 2.5em;
+    color: #6A1B9A;
+    /* Dark purple for headings */
+    margin-bottom: 20px;
+}
+
+.login-form-container {
+    background-color: #E0E0E0;
+    /* Grey box for the login form */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    /* Center the form */
+    max-width: 400px;
+    /* Set a max width for the form */
+}
+
+.login-section label {
+    font-size: 1em;
+    margin: 10px 0 5px;
+}
+
+.login-section input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-section button {
+    padding: 10px 20px;
+    background-color: #6A1B9A;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.login-section button:hover {
+    background-color: #8E24AA;
+}
+
+/* Services Section */
+.services-section {
+    padding: 60px 20px;
+    background-color: #F3EAFD;
+    /* Lightish purple background */
+    text-align: center;
+}
+
+.services-section h2 {
+    font-size: 2.5em;
+    color: #6A1B9A;
+    /* Dark purple for heading */
+    margin-bottom: 20px;
+}
+
+/* Grid layout for service cards */
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow items to wrap to the next line */
+    justify-content: center;
+    /* Center the grid items */
+}
+
+.service-card {
+    background-color: #FFFFFF;
+    /* White background for service card */
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Soft shadow */
+    max-width: 400px;
+    /* Max width of the card */
+    flex: 1 1 calc(45% - 40px);
+    /* Two cards per row with margin */
+    text-align: center;
+    /* Center text in the card */
+}
+
+.service-card h3 {
+    color: #6A1B9A;
+    /* Dark purple for service titles */
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: #555;
+    /* Dark grey for service description */
+    margin-bottom: 15px;
+}
+
+.service-card img {
+    width: 100%;
+    /* Make images responsive */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 5px;
+    /* Slightly rounded corners */
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #6A1B9A;
+    color: white;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 60px 20px;
+    background-color: #F3EAFD;
+    /* Lightish purple background */
+    text-align: center;
+    /* Center text */
+    border-radius: 8px;
+    /* Rounded corners for the section */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    margin: 20px;
+    /* Space around the contact section */
+}
+
+.contact-section h2 {
+    font-size: 2.5em;
+    color: #6A1B9A;
+    /* Dark purple for heading */
+    margin-bottom: 20px;
+    /* Space below heading */
+}
+
+.form-group {
+    margin: 15px 0;
+    /* Space between form elements */
+    text-align: left;
+    /* Align labels and inputs to the left */
+}
+
+label {
+    display: block;
+    /* Make labels block elements */
+    margin-bottom: 5px;
+    /* Space between label and input */
+    font-weight: bold;
+    /* Bold for labels */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    /* Full width for inputs */
+    padding: 10px;
+    /* Padding inside inputs */
+    border: 1px solid #ccc;
+    /* Border style */
+    border-radius: 5px;
+    /* Rounded corners */
+    box-sizing: border-box;
+    /* Include padding in width calculations */
+}
+
+button {
+    background-color: #6A1B9A;
+    /* Button color */
+    color: white;
+    /* Text color */
+    border: none;
+    /* No border */
+    padding: 10px 20px;
+    /* Padding */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    font-size: 1em;
+    /* Font size for buttons */
+    transition: background-color 0.3s;
+    /* Smooth transition for hover effect */
+}
+
+button:hover {
+    background-color: #8E24AA;
+    /* Darker shade on hover */
+}
+
+#confirmation {
+    margin-top: 20px;
+    /* Space above confirmation message */
+    font-weight: bold;
+    /* Bold text */
+    color: green;
+    /* Color for confirmation message */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .service-card {
+        width: calc(50% - 40px);
+        /* Adjust width to fit 2 cards in a row on smaller screens */
+    }
+
+    .team-member {
+        max-width: 45%;
+        /* Wider width for team members */
+    }
+}
+
+@media (max-width: 480px) {
+    .service-card {
+        width: 100%;
+        /* Full width for cards on mobile */
+    }
+
+    .team-member {
+        max-width: 100%;
+        /* Full width for team members on mobile */
+    }
+}
+
+/* Results Section */
+.results-section {
+    padding: 60px 20px;
+    background-color: #F3EAFD;
+    /* Lightish purple background */
+    text-align: center;
+}
+
+.results-section h2 {
+    font-size: 2.5em;
+    color: #6A1B9A;
+    /* Dark purple for headings */
+    margin-bottom: 20px;
+}
+
+.result-card {
+    background-color: #E0E0E0;
+    /* Grey box for result items */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.result-card h3 {
+    font-size: 1.5em;
+    color: #6A1B9A;
+    /* Dark purple for patient names */
+    margin-bottom: 10px;
+}
+
+.result-card p {
+    font-size: 1em;
+    color: #333;
+    /* Dark text for readability */
+    margin: 5px 0;
+}

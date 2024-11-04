@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - HospitEase</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <h1>HospitEase</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a id="login-button" href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="services-section">
+        <h2>Our Services</h2>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Emergency Care Services</h3>
+                <p>Immediate treatment for life-threatening conditions, including trauma care and cardiac emergencies.
+                </p>
+                <img src="s1.jpeg" alt="Emergency Care">
+            </div>
+
+            <div class="service-card">
+                <h3>Inpatient Services</h3>
+                <p>Comprehensive care for patients requiring hospitalization, including surgery and specialized medical
+                    attention.</p>
+                <img src="s2.jpeg" alt="Inpatient Services">
+            </div>
+
+            <div class="service-card">
+                <h3>Outpatient Services</h3>
+                <p>Services for patients who do not need to stay overnight, including routine check-ups and diagnostic
+                    testing.</p>
+                <img src="s3.jpeg" alt="Outpatient Services">
+            </div>
+
+            <div class="service-card">
+                <h3>Diagnostic Services</h3>
+                <p>Advanced imaging and laboratory services to aid in disease detection and treatment planning.</p>
+                <img src="s4.jpeg" alt="Diagnostic Services">
+            </div>
+
+            <div class="service-card">
+                <h3>Specialized Medical Services</h3>
+                <p>Focused care in fields such as cardiology, oncology, pediatrics, and orthopedics, provided by
+                    specialists.</p>
+                <img src="s5.jpeg" alt="Specialized Medical Services">
+            </div>
+
+            <div class="service-card">
+                <h3>Rehabilitation Services</h3>
+                <p>Therapy and support for recovery from injuries, surgeries, or illnesses, including physical and
+                    occupational therapy.</p>
+                <img src="s6.jpeg" alt="Rehabilitation Services">
+            </div>
+
+            <div class="service-card">
+                <h3>Health & Wellness Programs</h3>
+                <p>Preventive health programs that include screenings, vaccinations, and wellness workshops.</p>
+                <img src="s7.jpeg" alt="Health & Wellness Programs">
+            </div>
+
+            <div class="service-card">
+                <h3>Telemedicine Services</h3>
+                <p>Virtual consultations allowing patients to connect with healthcare providers from home.</p>
+                <img src="s8.jpeg" alt="Telemedicine Services">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 HospitEase. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Simple login status toggle script
+        function updateLoginStatus() {
+            const loginButton = document.getElementById("login-button");
+
+            if (localStorage.getItem("isLoggedIn") === "true") {
+                loginButton.textContent = "Logout";
+                loginButton.href = "#";
+                loginButton.onclick = function () {
+                    localStorage.removeItem("isLoggedIn");
+                    updateLoginStatus();
+                };
+            } else {
+                loginButton.textContent = "Login";
+                loginButton.href = "login.html";
+                loginButton.onclick = null;
+            }
+        }
+
+        updateLoginStatus();
+    </script>
+</body>
+
+</html>

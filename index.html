@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HospitEase - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <!-- Updated Navbar in index.html -->
+    <header>
+        <div class="navbar">
+            <h1>HospitEase</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a id="login-button" href="login.html">Login</a></li> <!-- Updated with ID -->
+            </ul>
+        </div>
+    </header>
+
+
+    <!-- Landing Section -->
+    <section class="landing-section">
+        <div class="content">
+            <h2>Welcome to HospitEase</h2>
+            <p>Your trusted partner in hospital management solutions.</p>
+            <a href="services.html" class="cta-button">Explore Our Services</a>
+            <a href="results.html" class="cta-button">View Results</a> <!-- New button for Results -->
+        </div>
+    </section>
+    <script>
+        // Check login status from local storage
+        function updateLoginStatus() {
+            const loginButton = document.getElementById("login-button");
+
+            if (localStorage.getItem("isLoggedIn") === "true") {
+                loginButton.textContent = "Logout";
+                loginButton.href = "#";
+                loginButton.onclick = function () {
+                    localStorage.removeItem("isLoggedIn");
+                    updateLoginStatus(); // Update button after logout
+                };
+            } else {
+                loginButton.textContent = "Login";
+                loginButton.href = "login.html";
+                loginButton.onclick = null;
+            }
+        }
+
+        // Call the function on page load
+        updateLoginStatus();
+    </script>
+    <div class="hamburger-menu" onclick="toggleMenu()">
+        &#9776;
+    </div>
+
+    <nav class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a id="login-button" href="login.html">Login</a></li>
+    </nav>
+
+</body>
+
+</html>
